@@ -210,7 +210,6 @@ export default function App() {
           playClicked={playClicked}
           resetSpinner={resetSpinner}
           setResetSpinner={setResetSpinner}
-          gameStateResponse={gameStateResponse}
           num={1}
         />
         <Spinner
@@ -218,7 +217,6 @@ export default function App() {
           playClicked={playClicked}
           resetSpinner={resetSpinner}
           setResetSpinner={setResetSpinner}
-          gameStateResponse={gameStateResponse}
           num={2}          
         />
         <Spinner
@@ -226,7 +224,6 @@ export default function App() {
           playClicked={playClicked}
           resetSpinner={resetSpinner}
           setResetSpinner={setResetSpinner}
-          gameStateResponse={gameStateResponse}
           num={3}
           finishHandler={finishHandler}
         />
@@ -251,5 +248,3 @@ export default function App() {
     </div>
   );
 }
-
-
