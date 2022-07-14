@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Example from '../Modal/RewardModal';
 
-const Spinner = ({ timer, playClicked, resetSpinner, num, finishHandler, setResetSpinner, gameStateResponse }) => {
+const Spinner = ({ timer, playClicked, resetSpinner, num, finishHandler, setResetSpinner }) => {
 
     const [spinner, setSpinner] = useState({
       position: 0,   //+230 ki distance pe hai sb items 
@@ -50,7 +50,7 @@ const Spinner = ({ timer, playClicked, resetSpinner, num, finishHandler, setRese
     };
   
     const startPos = () => {
-      clearInterval()
+      clearInterval(checkTick)
       setResetSpinner(prev => false)
       setSpinner(prev => { return {
         position : 0,
@@ -90,9 +90,8 @@ const Spinner = ({ timer, playClicked, resetSpinner, num, finishHandler, setRese
       setTimeout(() => {
           startPos()
         }, 5000)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[resetSpinner])
-
-
     
     let { position } = spinner;  
     
