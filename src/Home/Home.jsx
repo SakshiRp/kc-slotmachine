@@ -26,17 +26,6 @@ export default function App() {
   
   const {userDetails,userDetailsFunc } = useUserContext()
 
- 
-  
-  // uid : userDetails?.uid ?? "dummy",
-  //fetching user details from app
-  useEffect(()=>{
-    console.log("user context")
-    userDetailsFunc()
-// eslint-disable-next-line react-hooks/exhaustive-deps
-},[])
-
-
 // resets spinner to initial state and calls for acknowledgement API
   const finishHandler = () => {
     ackStatus(gameStateResponse[0]?.id)
